@@ -24,13 +24,6 @@ public class SelectScript : MonoBehaviour
     public Button selectBT;
     public Button readyBT;
 
-    Ship[] ships =
-    {
-        new FighterShip(),
-        new TankShip(),
-        new SupportShip(),
-        new GhostShip(),
-    };
     public Sprite[] shipSprite;
 
     public int shipSelected = 0;
@@ -91,8 +84,7 @@ public class SelectScript : MonoBehaviour
 
     public void OnClickReadyButton()
     {
-        PlayerNetScript playerNet = NetworkManager.Singleton.LocalClient.PlayerObject.GetComponent<PlayerNetScript>();
-        playerNet.GotoSceneServerRPC("Game");
+        NetFunctionsScript.Instance.GotoSceneServerRPC("Game");
     }
 
     string GetLocalIPAddress()
@@ -110,10 +102,11 @@ public class SelectScript : MonoBehaviour
 
     void SetShipInfo()
     {
-        shipNameTX.text = ships[shipSelected].shipName;
+        Ship ship = GameManager.Instance.ships[shipSelected].GetComponent<Ship>();
+        shipNameTX.text = ship.shipName;
         shipIM.sprite = shipSprite[shipSelected];
-        atkIM.rectTransform.sizeDelta = new Vector2(ships[shipSelected].atkPoints, atkIM.rectTransform.sizeDelta.y);
-        spdIM.rectTransform.sizeDelta = new Vector2(ships[shipSelected].spdPoints, atkIM.rectTransform.sizeDelta.y);
-        hltIM.rectTransform.sizeDelta = new Vector2(ships[shipSelected].hltPoints, atkIM.rectTransform.sizeDelta.y);
+        atkIM.rectTransform.sizeDelta = new Vector2(ship.atkPoints, atkIM.rectTransform.sizeDelta.y);
+        spdIM.rectTransform.sizeDelta = new Vector2(ship.spdPoints, atkIM.rectTransform.sizeDelta.y);
+        hltIM.rectTransform.sizeDelta = new Vector2(ship.hltPoints, atkIM.rectTransform.sizeDelta.y);
     }
 }

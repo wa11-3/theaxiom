@@ -132,7 +132,37 @@ ScriptedImporter:
       height: 32
     spriteID: f16d0be69ec7c42ecbda2a4903ef5772
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 1.5, y: 1}
+      - {x: 1.5, y: 0}
+      - {x: -1.5, y: 0}
+      - {x: -1.5, y: 1}
+      - {x: -2.5, y: 1}
+      - {x: -2.5, y: 13}
+      - {x: -1.5, y: 13}
+      - {x: -1.5, y: 14}
+      - {x: -0.5, y: 14}
+      - {x: -0.5, y: 15}
+      - {x: 0.5, y: 15}
+      - {x: 0.5, y: 14}
+      - {x: 1.5, y: 14}
+      - {x: 1.5, y: 13}
+      - {x: 2.5, y: 13}
+      - {x: 2.5, y: 1}
+    - outline:
+      - {x: -0.5, y: -4}
+      - {x: -0.5, y: -3}
+      - {x: -1.5, y: -3}
+      - {x: -1.5, y: 0}
+      - {x: -0.5, y: 0}
+      - {x: -0.5, y: -2}
+      - {x: 0.5, y: -2}
+      - {x: 0.5, y: 0}
+      - {x: 1.5, y: 0}
+      - {x: 1.5, y: -3}
+      - {x: 0.5, y: -3}
+      - {x: 0.5, y: -4}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -152,7 +182,37 @@ ScriptedImporter:
       height: 32
     spriteID: 67749a229ef5642679850787be740090
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 1.5, y: 1}
+      - {x: 1.5, y: 0}
+      - {x: -1.5, y: 0}
+      - {x: -1.5, y: 1}
+      - {x: -2.5, y: 1}
+      - {x: -2.5, y: 13}
+      - {x: -1.5, y: 13}
+      - {x: -1.5, y: 14}
+      - {x: -0.5, y: 14}
+      - {x: -0.5, y: 15}
+      - {x: 0.5, y: 15}
+      - {x: 0.5, y: 14}
+      - {x: 1.5, y: 14}
+      - {x: 1.5, y: 13}
+      - {x: 2.5, y: 13}
+      - {x: 2.5, y: 1}
+    - outline:
+      - {x: 0.5, y: -4}
+      - {x: 0.5, y: -5}
+      - {x: -0.5, y: -5}
+      - {x: -0.5, y: -4}
+      - {x: -1.5, y: -4}
+      - {x: -1.5, y: 0}
+      - {x: -0.5, y: 0}
+      - {x: -0.5, y: -3}
+      - {x: 0.5, y: -3}
+      - {x: 0.5, y: 0}
+      - {x: 1.5, y: 0}
+      - {x: 1.5, y: -4}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -172,7 +232,37 @@ ScriptedImporter:
       height: 32
     spriteID: 728fa1999102d4cf4b53501c6541cf84
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 1.5, y: 1}
+      - {x: 1.5, y: 0}
+      - {x: -1.5, y: 0}
+      - {x: -1.5, y: 1}
+      - {x: -2.5, y: 1}
+      - {x: -2.5, y: 13}
+      - {x: -1.5, y: 13}
+      - {x: -1.5, y: 14}
+      - {x: -0.5, y: 14}
+      - {x: -0.5, y: 15}
+      - {x: 0.5, y: 15}
+      - {x: 0.5, y: 14}
+      - {x: 1.5, y: 14}
+      - {x: 1.5, y: 13}
+      - {x: 2.5, y: 13}
+      - {x: 2.5, y: 1}
+    - outline:
+      - {x: 0.5, y: -3}
+      - {x: -0.5, y: -3}
+      - {x: -0.5, y: -2}
+      - {x: -1.5, y: -2}
+      - {x: -1.5, y: 0}
+      - {x: -0.5, y: 0}
+      - {x: -0.5, y: -1}
+      - {x: 0.5, y: -1}
+      - {x: 0.5, y: 0}
+      - {x: 1.5, y: 0}
+      - {x: 1.5, y: -2}
+      - {x: 0.5, y: -2}
     vertices: []
     spritePhysicsOutline: []
     indices: 

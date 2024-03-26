@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - NetPlayer
+  - BulletFactory
+  - Canvas
+  - Ship
   layers:
   - Default
   - TransparentFX
@@ -16,12 +19,12 @@ TagManager:
   - 
   - 
   - 
+  - Fighter
+  - Tank
+  - Ghost
+  - Support
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - MiniMap
   - 
   - 
   - 

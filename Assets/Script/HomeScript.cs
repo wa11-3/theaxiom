@@ -16,9 +16,5 @@ public class HomeScript : MonoBehaviour
                       $"with a {nameof(SceneEventProgressStatus)}: {status}");
             }
         }
-        else if (serverType == "client")
-        {
-            //readyBT.SetActive(true);
-        }
     }
 }

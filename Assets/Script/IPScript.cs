@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class IPScript : MonoBehaviour
 {
+    // Script that Manager the IP and the Server Connections
     public GameObject[] ipNumbers;
     public int pointer;
     public Transform[] verticalTransforms;
@@ -58,22 +59,6 @@ public class IPScript : MonoBehaviour
         bool point = false;
         for (int i = 0; i < ipNumbers.Length; i++)
         {
-            //if (point)
-            //{
-            //    if (ipNumbers[i].GetComponent<TMP_Text>().text == "0")
-            //    {
-            //    }
-            //    else
-            //    {
-            //        ip += $"{ipNumbers[i].GetComponent<TMP_Text>().text}";
-            //        point = false;
-            //    }
-            //}
-            //else
-            //{
-            //    ip += $"{ipNumbers[i].GetComponent<TMP_Text>().text}";
-            //}
-
             if (point && ipNumbers[i].GetComponent<TMP_Text>().text != "0")
             {
                 ip += $"{ipNumbers[i].GetComponent<TMP_Text>().text}";

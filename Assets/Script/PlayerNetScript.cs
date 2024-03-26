@@ -1,68 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
-using UnityEngine.SceneManagement;
-
 
 public class PlayerNetScript : NetworkBehaviour
 {
     public NetworkVariable<int> shipSelected = new NetworkVariable<int>(-1, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<int> damage = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<int> shield = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    public NetworkVariable<int> ulti = new NetworkVariable<int>(0, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+
+    public GameObject shipObject;
 
     public int amountPlayers;
 
     private void Start()
     {
-        NetworkManager.SceneManager.OnSceneEvent += SceneManager_OnSceneEvent;
-        NetworkManager.Singleton.OnClientConnectedCallback += OnClientConnectedCallback;
-        NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
-        amountPlayers = 1;
-    }
-
-    private void SceneManager_OnSceneEvent(SceneEvent sceneEvent)
-    {
-        if (sceneEvent.SceneEventType == SceneEventType.LoadEventCompleted)
+        shipSelected.OnValueChanged += ShipSelected;
+        if (IsHost && IsOwner)
         {
-            if (SceneManager.GetActiveScene().name == "Game" && IsOwner)
-            {
-                //Instanciar las Naves en ambos jugadores
-            }
-            else if (SceneManager.GetActiveScene().name == "GameOver" && IsHost)
-            {
-                //Eliminar y resetear todas las variables
-            }
+            GameManager.Instance.HostStarted();
         }
     }
 
-    private void OnClientConnectedCallback(ulong clientId)
+    private void ShipSelected(int previous, int current)
     {
-        amountPlayers += 1;
-        NewPlayerClientRPC(amountPlayers);
+        //damage.Value = GameManager.Instance.ships[shipSelected.Value].GetComponent<Ship>().hltPoints;
     }
-
-    private void OnClientDisconnectCallback(ulong clientId)
-    {
-
-    }
-
-    #region ServerRPC Functions
-    [ServerRpc]
-    public void GotoSceneServerRPC(string sceneName)
-    {
-        var status = NetworkManager.Singleton.SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-        if (status != SceneEventProgressStatus.Started)
-        {
-            Debug.LogWarning($"Failed to load {"Game"} " +
-                  $"with a {nameof(SceneEventProgressStatus)}: {status}");
-        }
-    }
-    #endregion
-
-    #region ClientRPC Functions
-    [ClientRpc]
-    public void NewPlayerClientRPC(int amount)
-    {
-        amountPlayers = amount;
-    }
-    #endregion
 }

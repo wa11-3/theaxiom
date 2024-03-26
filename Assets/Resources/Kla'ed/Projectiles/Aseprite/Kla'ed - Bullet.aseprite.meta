@@ -132,7 +132,16 @@ ScriptedImporter:
       height: 16
     spriteID: e1c9169c8568347a68bf55ecf1462eda
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 0, y: -5}
+      - {x: 0, y: -2}
+      - {x: -1, y: -2}
+      - {x: -1, y: 4}
+      - {x: 0, y: 4}
+      - {x: 0, y: 2}
+      - {x: 1, y: 2}
+      - {x: 1, y: -5}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -152,7 +161,21 @@ ScriptedImporter:
       height: 16
     spriteID: 06fd15cf6ac3946219c5c5193b551411
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 0, y: -4}
+      - {x: 0, y: -3}
+      - {x: -1, y: -3}
+      - {x: -1, y: 4}
+      - {x: 0, y: 4}
+      - {x: 0, y: 2}
+      - {x: 1, y: 2}
+      - {x: 1, y: -4}
+    - outline:
+      - {x: 0, y: -7}
+      - {x: 0, y: -5}
+      - {x: 1, y: -5}
+      - {x: 1, y: -7}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -172,7 +195,21 @@ ScriptedImporter:
       height: 16
     spriteID: 50bc8d53bca384e3aa4a581c304e5164
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 0, y: -2}
+      - {x: 0, y: -6}
+      - {x: -1, y: -6}
+      - {x: -1, y: 2}
+      - {x: 0, y: 2}
+      - {x: 0, y: 4}
+      - {x: 1, y: 4}
+      - {x: 1, y: -2}
+    - outline:
+      - {x: 0, y: -8}
+      - {x: 0, y: -7}
+      - {x: 1, y: -7}
+      - {x: 1, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -192,7 +229,21 @@ ScriptedImporter:
       height: 16
     spriteID: 4d45d84de08004b2c92677ea357b3b3d
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 0, y: -2}
+      - {x: 0, y: -4}
+      - {x: -1, y: -4}
+      - {x: -1, y: 2}
+      - {x: 0, y: 2}
+      - {x: 0, y: 4}
+      - {x: 1, y: 4}
+      - {x: 1, y: -2}
+    - outline:
+      - {x: -1, y: -7}
+      - {x: -1, y: -6}
+      - {x: 0, y: -6}
+      - {x: 0, y: -7}
     vertices: []
     spritePhysicsOutline: []
     indices: 
